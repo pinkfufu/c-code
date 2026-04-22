@@ -4,4 +4,4 @@ project(CLionProjects C)
 set(CMAKE_C_STANDARD 17)
 
 add_executable(CLionProjects main.c
-        chapter_01/01_hello.c)
+        chapter02/11_TestIO.c)

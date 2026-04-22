@@ -8,6 +8,7 @@ obj/
 # --- 编译生成的二进制文件 ---
 # 忽略 Windows 下的可执行文件
 *.exe
+*.out
 *.dll
 *.pdb
 # 忽略 Linux/macOS 下的可执行文件 (通常没有后缀)

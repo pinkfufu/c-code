@@ -5,4 +5,5 @@ set(CMAKE_C_STANDARD 17)
 
 add_executable(CLionProjects main.c
         chapter02/11_TestIO.c
-        chapter03/24_gotoTest.c)
+        chapter03/24_gotoTest.c
+)

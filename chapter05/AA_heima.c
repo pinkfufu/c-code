@@ -1,7 +1,7 @@
 //
 // Created by ZhangYao on 2026/4/24.
 //
-// 使用指针，找出数组中的最大值和最小值
+// 指针可以实现函数的多个返回值
 
 
 #include <stdio.h>
@@ -13,15 +13,10 @@ int main() {
     setbuf(stdout, NULL);
 
     int arr[] = {12, 5, 33, 4, 98, 6, 71, 8, 2};
-
     // 在 main 中计算长度是准确的
     int length = sizeof(arr) / sizeof(arr[0]);
-
     int max, min; // 这里不需要初始化，函数内部会处理
-
-    // 修正点2：传入 &max 和 &min（房卡），让函数能改写这两个变量的值
     getArrMaxAndMin(arr, length, &max, &min);
-
     printf("max = %d, min = %d\n", max, min);
 
     return 0;

@@ -8,4 +8,5 @@ add_executable(CLionProjects main.c
         chapter03/24_gotoTest.c
         chapter05/AA_heima.c
         chapter05/AA_AdvancedPointers.c
+        chapter05/AA_heima2.c
 )

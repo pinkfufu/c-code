@@ -46,6 +46,16 @@ int main() {
     p = div;
     printf("pDiv = %d\n", p(16, 2));
 
+    // 函数指针数组
+    int (*pp[4])(int, int) = {add, sub, mul, div};
+    char *names[] = {"加法", "减法", "乘法", "除法"};
+    // 2. 用一个循环完成所有计算
+    for (int i = 0; i < 4; i++) {
+        // pp[i] 就是取第 i 个遥控器，后面跟 (10, 2) 就是按下去
+        int result = pp[i](10, 2);
+        printf("%s 结果: %d\n", names[i], result);
+    }
+
     return 0;
 }
 

@@ -25,7 +25,8 @@ int main() {
     printf("%p\n", q + 2);  //000000f2f49ff7b8
 
     int *r;
-    r = a;   //a[0]的地址赋给r
+
+    r = (int *)a; // 强制转换，编译器就不报错、、、、报错：【r = a;   //a[0]的地址赋给r】
     printf("%p\n", r);      //000000f2f49ff7b0
     printf("%p\n", r + 1);  //000000f2f49ff7b4
     printf("%p\n", r + 2);  //000000f2f49ff7b8

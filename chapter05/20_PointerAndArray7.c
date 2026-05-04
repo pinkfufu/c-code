@@ -1,5 +1,5 @@
 //
-// Created by ZhangYao on 2026/4/23.
+// Created by ZhangYao on 2026/5/5.
 //
 // 测试指向固定长度的数组的指针变量的使用
 

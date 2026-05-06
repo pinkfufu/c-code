@@ -10,4 +10,5 @@ add_executable(CLionProjects main.c
         chapter05/AA_AdvancedPointers.c
         chapter05/AA_heima2.c
         chapter05/07_malloc.c
+        chapter07/02_StructTest2.c
 )

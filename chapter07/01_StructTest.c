@@ -15,7 +15,6 @@ struct Student{
     char gender; //性别
     int age; //年龄
     char address[50]; //家庭住址
-
 };
 
 //结构体：猫

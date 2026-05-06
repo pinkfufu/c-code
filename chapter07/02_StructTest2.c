@@ -25,7 +25,7 @@ int main() {
     struct Cat cat1 = {"小黄", 3, "F"};
     printf("name = %s, age = %d, gender = %s\n", cat1.name, cat1.age, cat1.gender);
 
-    
+
 
     return 0;
 }

@@ -13,4 +13,5 @@ add_executable(CLionProjects main.c
         chapter07/02_StructTest2.c
         chapter07/03_StructTest3.cpp
         chapter08/01_String.c
+        chapter08/02_TraverseString.c
 )

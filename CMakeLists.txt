@@ -12,4 +12,5 @@ add_executable(CLionProjects main.c
         chapter05/07_malloc.c
         chapter07/02_StructTest2.c
         chapter07/03_StructTest3.cpp
+        chapter08/01_String.c
 )

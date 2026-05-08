@@ -3,6 +3,7 @@
 //
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h> // 必须包含，用于 malloc 和 free
 
 /**
  * 需求：键盘录入一个字符串，使用程序实现在控制台遍历该字符串
@@ -12,30 +13,45 @@
 int main() {
     setbuf(stdout, NULL);
     int len;
-    char str[100]; // 定义一个足够大的缓冲区
-
-    printf("请输入设定的最大长度 len: ");
+    printf("请输入允许的最大字符串长度 (len): ");
     scanf("%d", &len);
 
-    // 使用 do-while 循环实现“不符合要求就重新输入”
-    do {
-        printf("请输入一个长度不超过 %d 的字符串: ", len);
+    // 1. 根据输入的 len 动态分配内存
+    // +1 是为了给字符串结束符 '\0' 预留空间
+    char *str = (char *) malloc((len + 1) * sizeof(char));
+
+    if (str == NULL) {
+        printf("内存分配失败！\n");
+        return 1;
+    }
+
+    // 2. 循环录入并校验
+    while (1) {
+        printf("请输入字符串 (长度不能超过 %d): ", len);
         scanf("%s", str);
 
-        // 判断实际输入的长度是否超过了设定值 len
-        if (strlen(str) > len) {
-            printf("错误：字符串太长了（当前长度 %zu），请重新输入！\n", strlen(str));
-        } else {
-            break; // 长度合格，跳出循环
-        }
-    } while (1);
+        // 获取实际录入的字符串长度 n
+        int n = strlen(str);
 
-    // 遍历输出
+        if (n > len) {
+            printf("错误：你输入的长度为 %d，超过了限制 %d，请重新输入！\n", n, len);
+            // 清理缓冲区（防止干扰下次输入）
+            while (getchar() != '\n');
+        } else {
+            printf("输入成功！\n");
+            break;
+        }
+    }
+
+    // 3. 遍历输出
     printf("遍历结果为: ");
     for (int i = 0; str[i] != '\0'; i++) {
         printf("%c", str[i]);
     }
     printf("\n");
+
+    // 4. 关键：手动释放动态内存
+    free(str);
 
     return 0;
 }

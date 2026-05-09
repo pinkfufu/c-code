@@ -15,4 +15,5 @@ add_executable(CLionProjects main.c
         chapter08/01_String.c
         chapter08/02_TraverseString.c
         chapter08/03_Traverse.c
+        chapter08/04_StringCommonlyFunctions.c
 )

@@ -16,4 +16,5 @@ add_executable(CLionProjects main.c
         chapter08/02_TraverseString.c
         chapter08/03_Traverse.c
         chapter08/04_StringCommonlyFunctions.c
+        chapter08/05_userLogin.cpp
 )

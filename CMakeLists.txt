@@ -31,4 +31,5 @@ add_executable(CLionProjects main.c
         chapter12/04_file_fread.c
         chapter12/05_file_write_fputc.c
         chapter12/06_file_write_fputs.c
+        "chapter12/07_file_write_ fwrite.c"
 )

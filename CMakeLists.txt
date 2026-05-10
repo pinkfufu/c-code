@@ -23,4 +23,5 @@ add_executable(CLionProjects main.c
         chapter09/03_StructureNesting.c
         chapter10/01_UnionTest.c
         chapter10/02_UnionTest.c
+        chapter11/01_MemoryDynamicy.c
 )

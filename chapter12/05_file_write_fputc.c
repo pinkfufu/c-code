@@ -4,8 +4,8 @@
 
 
 #include <stdio.h>
-// fputc：一次写一个字符
 /**
+// fputc：一次写一个字符
 fputc(ch, fp) 写一个字符到文件。
 适合需要逐字符输出或转换的场景。
  */

@@ -29,5 +29,5 @@ add_executable(CLionProjects main.c
         chapter12/02_file_fgetc.c
         chapter12/03_file_fgets.c
         chapter12/04_file_fread.c
-        chapter12/05_file_write.c
+        chapter12/05_file_write_fputc.c
 )

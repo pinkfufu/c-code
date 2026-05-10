@@ -31,5 +31,11 @@ int main() {
     size_t writtenInts = fwrite(numbers, sizeof(int), numElements, fp);
     printf("写入 %zu 个整数（二进制）\n", writtenInts);
 
+    // 示例2：写入一个字符串（明确长度）
+    const char *greeting = "Hello from fwrite!\n";
+    size_t len = 15;  // 可以自己指定要写入的字节数，不包含 '\0'
+    size_t writtenChars = fwrite(greeting, 1, len, fp);
+    printf("写入 %zu 个字符\n", writtenChars);
+    
     return 0;
 }

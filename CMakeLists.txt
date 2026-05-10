@@ -26,4 +26,6 @@ add_executable(CLionProjects main.c
         chapter11/01_MemoryDynamicy.c
         chapter11/02_MemoryDynamics.c
         chapter12/01_file.c
+        chapter12/02_file_fgetc.c
+        chapter12/03_file_fgets.c
 )

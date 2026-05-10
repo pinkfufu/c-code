@@ -36,6 +36,18 @@ int main() {
     size_t len = 15;  // 可以自己指定要写入的字节数，不包含 '\0'
     size_t writtenChars = fwrite(greeting, 1, len, fp);
     printf("写入 %zu 个字符\n", writtenChars);
-    
+
+    // 示例3：写入一个结构体
+    struct Student {
+        char name[20];
+        int age;
+        double score;
+    } stu = {"Alice", 20, 92.5};
+    size_t writtenStruct = fwrite(&stu, sizeof(stu), 1, fp);
+    printf("写入 %zu 个结构体\n", writtenStruct);
+
+    printf("写入成功，请查看文件（注意结构体部分是二进制不可读）：%s\n", filename);
+    fclose(fp);
+
     return 0;
 }

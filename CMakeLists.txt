@@ -22,4 +22,5 @@ add_executable(CLionProjects main.c
         chapter09/02_StructuresAndFunctions.cpp
         chapter09/03_StructureNesting.c
         chapter10/01_UnionTest.c
+        chapter10/02_UnionTest.c
 )

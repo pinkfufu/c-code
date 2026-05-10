@@ -24,4 +24,5 @@ add_executable(CLionProjects main.c
         chapter10/01_UnionTest.c
         chapter10/02_UnionTest.c
         chapter11/01_MemoryDynamicy.c
+        chapter11/02_MemoryDynamics.c
 )

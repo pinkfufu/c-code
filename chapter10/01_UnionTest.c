@@ -4,20 +4,30 @@
 
 
 #include <stdio.h>
+#include <string.h>
 
 /**
- * 核心：一种数据可能有多种类型
+ * 核心：一种数据可能有多种类型 而且每次只能赋一个值
 需求：
 金融项目中，钱有可能是整数，小数，字符串，请定义对应的共同体
  */
 union money {
-
+    double mond;
+    int moneyi;
+    char mons[100];
 };
 
 int main() {
     // 解决 Windows 下控制台输出缓冲区导致的显示延迟问题
     setbuf(stdout, NULL);
 
+    union money m;
+    m.moneyi = 100;
+    printf("整数：%d\n", m.moneyi);
+    m.mond = 99.99;
+    printf("小数：%.2f\n", m.mond);
+    strcpy(m.mons, "A");   // ✅ 使用 strcpy
+    printf("字符串：%s\n", m.mons);
 
     return 0;
 }
